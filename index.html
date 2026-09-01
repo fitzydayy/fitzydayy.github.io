@@ -1,128 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FitzyDayy — curated everyday looks & shop the look." />
-  <title>FitzyDayy ♡ Curated Everyday Looks</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fbf7f1" />
+  <meta name="description" content="FitzyDayy — soft, wearable everyday outfit inspiration and easy shop links." />
+  <title>FitzyDayy ♡ Everyday OOTD</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home">FitzyDayy ♡</a>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#ootd">OOTD</a>
-      <a href="#categories">Categories</a>
-      <a href="#about">About</a>
-    </nav>
-    <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-  </header>
+<header class="header">
+  <a class="brand" href="#top">FitzyDayy ♡</a>
+  <nav>
+    <a href="#looks">OOTD</a><a href="#find">Find a look</a><a href="https://www.instagram.com/fitzydayy/" target="_blank" rel="noopener">Instagram ↗</a>
+  </nav>
+</header>
 
-  <main>
-    <section id="home" class="hero section">
-      <div class="hero-copy">
-        <span class="eyebrow">curated everyday looks ♡</span>
-        <h1>Find your<br>perfect look</h1>
-        <p>Soft, wearable outfit inspiration with easy shop links — curated by FitzyDayy.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#ootd">Browse OOTD</a>
-          <a class="btn secondary" href="#search">Search by code</a>
-        </div>
-      </div>
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="kicker">daily outfits • soft styling • easy links</p>
+      <h1>Your little<br><em>outfit diary</em> ♡</h1>
+      <p class="intro">Curated everyday looks with a soft Korean/Japanese-inspired mood. See something you like on Instagram? Find the same OOTD here and shop in one tap.</p>
+      <div class="actions"><a class="btn dark" href="#looks">Browse looks</a><a class="btn light" href="#find">Search FD code</a></div>
+      <div class="mini-note">35 looks • May–Aug 2026</div>
+    </div>
+    <div class="hero-stack" aria-hidden="true">
+      <img src="images/fd035.jpg" alt="" class="hero-img a" />
+      <img src="images/fd034.jpg" alt="" class="hero-img b" />
+      <div class="paper-note">wear what<br>feels like you ♡</div>
+    </div>
+  </section>
 
-      <div class="hero-card">
-        <div class="look-art">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="outfit-figure">
-            <div class="head"></div>
-            <div class="top"></div>
-            <div class="pants"></div>
-            <div class="bag"></div>
-          </div>
-          <div class="note note-1">be your<br>best self ♡</div>
-          <div class="note note-2">soft • minimal • daily</div>
-        </div>
-      </div>
-    </section>
+  <section id="find" class="finder">
+    <div><p class="kicker">from Instagram?</p><h2>Find your OOTD</h2><p>Type the code from the post, for example <strong>FD035</strong>.</p></div>
+    <form id="searchForm" class="search" autocomplete="off"><input id="searchInput" type="search" placeholder="FD035" aria-label="OOTD code"/><button class="btn dark" type="submit">Find look</button></form>
+    <p id="searchMessage" class="message" aria-live="polite"></p>
+  </section>
 
-    <section id="search" class="search-section section">
-      <div>
-        <span class="eyebrow">Found this look on Instagram?</span>
-        <h2>Search by OOTD code</h2>
-        <p>Type a code such as <strong>FD023</strong> to find the exact look.</p>
-      </div>
-      <div class="search-box">
-        <input id="searchInput" type="search" placeholder="e.g. FD023" maxlength="12" />
-        <button class="btn primary" onclick="searchLook()">Search</button>
-      </div>
-      <p id="searchMessage" class="search-message" aria-live="polite"></p>
-    </section>
+  <section id="looks" class="looks-section">
+    <div class="section-head"><div><p class="kicker">the lookbook</p><h2>Latest OOTD</h2></div><div class="filters" id="filters"><button class="chip active" data-month="all">All</button><button class="chip" data-month="08">Aug</button><button class="chip" data-month="07">Jul</button><button class="chip" data-month="06">Jun</button><button class="chip" data-month="05">May</button></div></div>
+    <div id="grid" class="grid"></div>
+  </section>
 
-    <section id="ootd" class="section">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">daily outfit ideas</span>
-          <h2>OOTD Collection</h2>
-        </div>
-        <div class="filters" id="filters">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="casual">Casual</button>
-          <button class="filter" data-filter="cute">Cute</button>
-          <button class="filter" data-filter="minimal">Minimal</button>
-        </div>
-      </div>
+  <section class="about">
+    <div class="about-card"><span class="heart">♡</span><div><p class="kicker">about fitzydayy</p><h2>Soft looks for real days.</h2><p>Wearable outfit inspiration, styling details and quick links to pieces worth saving.</p><a href="https://www.instagram.com/fitzydayy/" target="_blank" rel="noopener">@fitzydayy on Instagram ↗</a></div></div>
+  </section>
+</main>
 
-      <div id="ootdGrid" class="ootd-grid"></div>
-    </section>
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="backdrop" data-close></div>
+  <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="close" type="button" data-close aria-label="Close">×</button>
+    <div id="modalBody"></div>
+  </article>
+</div>
 
-    <section id="categories" class="section categories-section">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">shop by mood</span>
-          <h2>Categories</h2>
-        </div>
-      </div>
-      <div class="category-grid">
-        <div class="category-card"><span>♡</span><strong>Tops</strong></div>
-        <div class="category-card"><span>⌁</span><strong>Bottoms</strong></div>
-        <div class="category-card"><span>✦</span><strong>Dresses</strong></div>
-        <div class="category-card"><span>⌂</span><strong>Bags</strong></div>
-        <div class="category-card"><span>⌇</span><strong>Shoes</strong></div>
-        <div class="category-card"><span>○</span><strong>Accessories</strong></div>
-      </div>
-    </section>
-
-    <section id="about" class="section about-section">
-      <div class="about-card">
-        <div class="about-avatar">F</div>
-        <div>
-          <span class="eyebrow">about fitzydayy</span>
-          <h2>Everyday fashion, thoughtfully curated ♡</h2>
-          <p>FitzyDayy is a soft-minimal lookbook made to help you discover wearable outfit ideas and quickly find the pieces you love.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div id="lookModal" class="modal" aria-hidden="true">
-    <div class="modal-backdrop" onclick="closeModal()"></div>
-    <article class="modal-card">
-      <button class="modal-close" aria-label="Close" onclick="closeModal()">×</button>
-      <div id="modalContent"></div>
-    </article>
-  </div>
-
-  <footer>
-    <strong>FitzyDayy ♡</strong>
-    <span>curated everyday looks</span>
-  </footer>
-
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+<footer><span>FitzyDayy ♡</span><span>curated everyday looks</span></footer>
+<script src="data.js"></script><script src="script.js"></script>
 </body>
 </html>
