@@ -1,6 +1,6 @@
 const grid = document.getElementById('grid');
 const modal = document.getElementById('modal');
-const monthNames = {"05":"May","06":"Jun","07":"Jul","08":"Aug"};
+const monthNames = {"05":"May","06":"Jun","07":"Jul","08":"Aug","09":"Sep"};
 
 function niceDate(iso){
   const d = new Date(iso+'T00:00:00');
