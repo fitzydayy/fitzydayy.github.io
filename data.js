@@ -348,5 +348,75 @@ const LOOKS = [
     "shopee_link": "https://s.shopee.co.th/7KwP0aqaVI?share_channel_code=6",
     "status": "matched",
     "display_date": "2026-08-21"
+  },
+  {
+      "fd_code": "FD036",
+      "instagram_date": "2026-08-25",
+      "source_image_no": "",
+      "source_filename": "FD036.jpg",
+      "web_image": "images/fd036.jpg",
+      "shopee_link": "https://s.shopee.co.th/9AOdmQ07NA?share_channel_code=6",
+      "status": "matched",
+      "display_date": "2026-08-25"
+  },
+  {
+      "fd_code": "FD037",
+      "instagram_date": "2026-08-28",
+      "source_image_no": "",
+      "source_filename": "FD037.jpg",
+      "web_image": "images/fd037.jpg",
+      "shopee_link": "https://s.shopee.co.th/2LYJdtls9f",
+      "status": "matched",
+      "display_date": "2026-08-28"
+  },
+  {
+      "fd_code": "FD038",
+      "instagram_date": "2026-09-01",
+      "source_image_no": "",
+      "source_filename": "FD038.jpg",
+      "web_image": "images/fd038.jpg",
+      "shopee_link": "https://s.shopee.co.th/7ptGC1i3ok",
+      "status": "matched",
+      "display_date": "2026-09-01"
+  },
+  {
+      "fd_code": "FD039",
+      "instagram_date": "2026-09-09",
+      "source_image_no": "",
+      "source_filename": "FD039.jpg",
+      "web_image": "images/fd039.jpg",
+      "shopee_link": "https://s.shopee.co.th/gQ5esmT5w",
+      "status": "matched",
+      "display_date": "2026-09-09"
+  },
+  {
+      "fd_code": "FD040",
+      "instagram_date": "2026-09-11",
+      "source_image_no": "",
+      "source_filename": "FD040.jpg",
+      "web_image": "images/fd040.jpg",
+      "shopee_link": "https://s.shopee.co.th/3B7QdUY9C8",
+      "status": "matched",
+      "display_date": "2026-09-11"
+  },
+  {
+      "fd_code": "FD041",
+      "instagram_date": "2026-09-15",
+      "source_image_no": "",
+      "source_filename": "FD041.jpg",
+      "web_image": "images/fd041.jpg",
+      "shopee_link": "https://s.shopee.co.th/30nsVPR7RI",
+      "status": "matched",
+      "display_date": "2026-09-15"
+  },
+  {
+      "fd_code": "FD042",
+      "instagram_date": "2026-09-15",
+      "source_image_no": "",
+      "source_filename": "FD042.jpg",
+      "web_image": "images/fd042.jpg",
+      "shopee_link": "https://s.shopee.co.th/7fZi3q94OE",
+      "status": "matched",
+      "display_date": "2026-09-15"
   }
 ];
