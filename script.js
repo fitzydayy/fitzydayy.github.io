@@ -9,7 +9,11 @@ function niceDate(iso){
 
 function render(month='all'){
   grid.innerHTML='';
-  const data=[...LOOKS].sort((a,b)=>b.instagram_date.localeCompare(a.instagram_date))
+  const data=[...LOOKS].sort((a,b)=>{
+  const dateCompare = b.instagram_date.localeCompare(a.instagram_date);
+  if(dateCompare !== 0) return dateCompare;
+  return b.fd_code.localeCompare(a.fd_code);
+})
     .filter(x=>month==='all'||x.instagram_date.slice(5,7)===month);
   data.forEach(x=>{
     const el=document.createElement('article');
@@ -39,7 +43,7 @@ document.getElementById('searchForm').addEventListener('submit',e=>{
   if(/^\d{1,3}$/.test(v))v='FD'+v.padStart(3,'0');
   const found=LOOKS.find(x=>x.fd_code===v);
   const msg=document.getElementById('searchMessage');
-  if(found){msg.textContent=`Found ${found.fd_code} ♡`;openLook(found.fd_code)}else{msg.textContent=v?`No look found for ${v}. Try a code from FD001–FD035.`:'Type an OOTD code first.'}
+  if(found){msg.textContent=`Found ${found.fd_code} ♡`;openLook(found.fd_code)}else{msg.textContent=v?`No look found for ${v}. Try a code from FD001–FD042.`:'Type an OOTD code first.'}
 });
 
 document.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>{
