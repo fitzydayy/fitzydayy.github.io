@@ -14,7 +14,7 @@ Replace the files in the repository root with:
 GitHub Pages will update automatically after the commit.
 
 ## Current data
-- FD001–FD035 ordered by Instagram posting date.
+- FD001–FD042 ordered by Instagram posting date.
 - Gallery displays newest first.
 - FD001–FD003 images are included; their Shopee links are currently blank because no links were supplied for those three early posts.
 - FD004–FD035 use the mapped Shopee affiliate links.
@@ -23,3 +23,7 @@ GitHub Pages will update automatically after the commit.
 1. Add image as `images/fd036.jpg`.
 2. Add one object to `LOOKS` in `data.js` with `fd_code`, `instagram_date`, `web_image`, and `shopee_link`.
 3. Commit. The site sorts by date automatically.
+
+
+## September 2026 update
+Added FD036–FD042, September filter, and current Shopee links.
